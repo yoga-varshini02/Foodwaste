@@ -1,0 +1,12 @@
+-	master pool:
+vmImage: 'ubuntu-latest'
+steps:
+-	task:
+MavenAuthenticate@0 inputs:
+mavenServiceConnection: 'YourMavenServiceConnection' mavenPomFile: 'path/to/your/pom.xml'
+options: '-Xmx3072m'
+
+-	task: Maven@3 inputs:
+mavenPomFile: 'path/to/your/pom.xml' goals: 'clean package'
+options: '-Xmx3072m'
+ 
